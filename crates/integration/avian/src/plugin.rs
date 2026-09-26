@@ -217,7 +217,7 @@ fn position_should_rollback(confirmed: &Position, predicted: &Position) -> bool 
 }
 
 fn rotation_should_rollback(confirmed: &Rotation, predicted: &Rotation) -> bool {
-    confirmed.angle_between(*predicted) >= Scalar::from(DEFAULT_ROLLBACK_TOLERANCE)
+    confirmed.angle_between(*predicted) >= Scalar::from(0.15)
 }
 
 fn linear_velocity_should_rollback(confirmed: &LinearVelocity, predicted: &LinearVelocity) -> bool {
